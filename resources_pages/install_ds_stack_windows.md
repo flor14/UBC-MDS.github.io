@@ -439,7 +439,7 @@ Go to `Tools > Global Options > Code > Editing` and tick the following option:
 
 ![](/resources_pages/imgs/new-pipe-rstudio.png)
 
-Once the change is made you can try in the RStudio console `Ctrl` + `Shift` + `M` to check if works.
+Once the change is made you can try in the RStudio console `Ctrl` + `Shift` + `m` to check if works.
 
 ### Rtools
 
@@ -510,7 +510,6 @@ To check that the extension is working,
 open JupyterLab,
 launch an R notebook,
 and try inserting the operators by pressing `Alt` + `-` or `Shift` + `Ctrl` + `m`, respectively.
-
 
 
 ## LaTeX
