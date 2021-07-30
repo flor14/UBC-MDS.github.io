@@ -549,31 +549,36 @@ Compiled with zlib 1.2.11; using zlib 1.2.11
 Compiled with xpdf version 4.03
 ```
 
-The above is all we need to have LaTeX work with R Markdown documents. However, for Jupyter we need to add several more packages. To complete the installation open an R console in JupyterLab, type the commands listed below and press `Ctrl` + `enter`:
+The above is all we need to have LaTeX work with R Markdown documents, however for Jupyter we need to add several more packages. Before we do this, please [sign out of Windows](https://support.microsoft.com/en-us/windows/sign-out-of-windows-346925bb-024c-cd86-7a53-9066242a9ed3) and back in again in order for the Git Bash terminal to be able to find the location of TinyTex.
+
+When you sign back in,
+install the additional LaTeX packages needed for Jupyter by pasting the following into the new terminal instance and press enter:
+by pasting the following:
 
 ```
-tinytex::tlmgr_install(c("eurosym", 
-                         "adjustbox",
-                         "caption",
-                         "collectbox",
-                         "enumitem",
-                         "environ",
-                         "fp",
-                         "jknapltx",
-                         "ms",
-                         "oberdiek",
-                         "parskip",
-                         "pgf",
-                         "rsfs",
-                         "tcolorbox",
-                         "titling",
-                         "trimspaces",
-                         "ucs",
-                         "ulem",
-                         "upquote"))
+tlmgr.bat install eurosym \
+  adjustbox \
+  caption \
+  collectbox \
+  enumitem \
+  environ \
+  fp \
+  jknapltx \
+  ms \
+  parskip \
+  pgf \
+  rsfs \
+  tcolorbox \
+  titling \
+  trimspaces \
+  ucs \
+  ulem \
+  upquote
 ```
 
-To test that your latex installation is working
+To test that your latex installation is working with jupyter notebooks,
+launch `jupyter lab` from a terminal and open either a new notebook
+or the same one you used to test IRkernel above.
 Go to `File -> Export notebook as... -> Export Notebook to PDF`.
 If the PDF file is created,
 your LaTeX environment is set up correctly.
@@ -850,5 +855,4 @@ Details on where to submit will be provided later.
 * [Software Carpentry](https://software-carpentry.org/)
 * [Oracle - How do I set or change the PATH system variable?](https://www.java.com/en/download/help/path.xml)
 * [Numerical Methods - Getting started](https://clouds.eos.ubc.ca/~phil/numeric/python.html)
-* [UBC - Data Science: A First Introduction](https://ubc-dsci.github.io/introduction-to-datascience/move-to-your-own-machine.html)
 * [RStudio - New native pipe operator](https://blog.rstudio.com/2021/06/09/rstudio-v1-4-update-whats-new/)
