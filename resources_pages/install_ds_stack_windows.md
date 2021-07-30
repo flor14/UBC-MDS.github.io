@@ -341,10 +341,8 @@ pip install https://github.com/jupyter/nbconvert/archive/6.0.0a6.zip
 We will be using the Jupytext Python package and the JupyterLab git extension to facilitate using Jupyter notebooks with Git & GitHub. Install them via the following commands:
 
 ```
-conda install -y nodejs=15.*
-pip install --upgrade jupyterlab-git
-conda install -y jupytext=1.*
-jupyter lab build
+conda install nodejs=15.*
+conda install -c conda-forge jupyterlab jupyterlab-git jupytext
 ```
 
 To test that your JupyterLab installation is functional, you can type `jupyter lab` into a terminal, which should open a new tab in your default browser with the JupyterLab interface.
